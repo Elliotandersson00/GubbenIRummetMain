@@ -13,18 +13,17 @@ namespace GubbenIRummet
             GameTitle();
             while (!gameOver)
             {
-                
-                    Question question1 = new Question("Vad heter världen mest använda sökmotor?\n 1 = Google\n 2 = Bing\n 3 = Edge", 1);
-                    Console.WriteLine(question1.Questions);
-                    answer = int.Parse(Console.ReadLine());
-                    if (question1.CheckAnswer(answer) != true)
-                    {
+                Question question1 = new Question("Vad heter världen mest använda sökmotor?\n 1 = Google\n 2 = Bing\n 3 = Edge", 1);
+                Console.WriteLine(question1.Questions);
+                answer = int.Parse(Console.ReadLine());
+                if (question1.CheckAnswer(answer) != true)
+                {
                     Console.WriteLine("Fel svar, försök igen!");
                     answersFalse++;
                     continue;
-                    }
+                }
                 Console.WriteLine("Rätt! Nästa fråga:");
-                
+
                 Question question2 = new Question("I datatyperna Float och Double kan du lagra??\n 1 = Endast heltal, Double kan lagra dubbelt så stora heltal som float\n 2 = Decimaltal\n 3 = Teckensträngar, Double kan lagra två strängar", 2);
                 Console.WriteLine(question2.Questions);
                 answer = int.Parse(Console.ReadLine());
@@ -67,7 +66,6 @@ namespace GubbenIRummet
 
                 // Lägg in fler frågor här.
 
-
                 Console.WriteLine($"Grattis! Du svarade bara fel {answersFalse} gånger!");
                 Console.ReadLine();
             }
@@ -78,7 +76,6 @@ namespace GubbenIRummet
                 Console.WriteLine("Tryck På Valfri Knapp:");
                 Console.ReadLine();
                 Console.Clear();
-
             }
         }
     }
