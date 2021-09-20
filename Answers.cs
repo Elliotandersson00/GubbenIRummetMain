@@ -4,13 +4,9 @@ using System.Text;
 
 namespace GubbenIRummet
 {
-    class Doors
+    class Answer
     {
+        public int MyProperty { get; set; }
         
-
-    }
-    class Rooms : Doors
-    {
-
     }
 }
