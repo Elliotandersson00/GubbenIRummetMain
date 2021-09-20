@@ -33,11 +33,35 @@ namespace GubbenIRummet
                 }
                 Console.WriteLine("Rätt! Nästa fråga:");
 
-                // Question question3 = new Question("Hur många binära siffror innehåller en klassisk IP-adress??\n 1 = 16\n 2 = 64\n 3 = 32", 3);
+                Question question3 = new Question("Hur många binära siffror innehåller en klassisk IP-adress??\n 1 = 16\n 2 = 64\n 3 = 32", 3);
+                Console.WriteLine(question3.Questions);
+                answer = int.Parse(Console.ReadLine());
+                if (question3.CheckAnswer(answer) != true)
+                {
+                    Console.WriteLine("Fel svar, försök igen!");
+                    continue;
+                }
+                Console.WriteLine("Rätt! Nästa fråga:");
 
-                // Question question4 = new Question("Vad är källkod?\n 1 = Kod till källardörren\n 2 = Den kod du skriver i t.ex Visual studio\n 3 = Ett slags hemligt tecken som endast de "riktiga" programmerarna känner till. Tidigare arbetade programmerare ofta på källarvåningen därav uttrycket källkod", 2);
+                Question question4 = new Question("Vad är källkod?\n 1 = Kod till källardörren\n 2 = Den kod du skriver i t.ex Visual studio\n 3 = Ett slags hemligt tecken som endast de 'riktiga' programmerarna känner till. Tidigare arbetade programmerare ofta på källarvåningen därav uttrycket källkod", 2);
+                Console.WriteLine(question4.Questions);
+                answer = int.Parse(Console.ReadLine());
+                if (question4.CheckAnswer(answer) != true)
+                {
+                    Console.WriteLine("Fel svar, försök igen!");
+                    continue;
+                }
+                Console.WriteLine("Rätt! Nästa fråga:");
 
-                // Question question5 = new Question("Vad menas med kompilering?\n 1 = Omvandling från ett programspråk till maskinkod\n 2 = Ett sätt att komprimera program\n 3 = När du ger en variabel ett nytt värde görs en kompilering", 1);
+                Question question5 = new Question("Vad menas med kompilering?\n 1 = Omvandling från ett programspråk till maskinkod\n 2 = Ett sätt att komprimera program\n 3 = När du ger en variabel ett nytt värde görs en kompilering", 1);
+                Console.WriteLine(question5.Questions);
+                answer = int.Parse(Console.ReadLine());
+                if (question5.CheckAnswer(answer) != true)
+                {
+                    Console.WriteLine("Fel svar, försök igen!");
+                    continue;
+                }
+                Console.WriteLine("Rätt! Nästa fråga:");
             }
 
             static void GameTitle()
