@@ -16,7 +16,7 @@ namespace GubbenIRummet
             string[,] grid = // här har vi våran värld.
             {
                 {"█", "█", "█", "█", "█", "█", "█"},
-                {"█", " ", "█", " ", " ", " ", "X"},
+                {"█", " ", "█", " ", " ", " ", "?"},
                 {" ", " ", "█", " ", "█", " ", "█"},
                 {"█", " ", "█", " ", "█", " ", "█"},
                 {"█", " ", " ", " ", "█", " ", "█"},
@@ -88,13 +88,13 @@ namespace GubbenIRummet
 
                 // Kolla om player nått kistan och breaka ut oss ur loopen
                 string elementAtPlayerPos = MyWorld.GetElementAt(CurrentPlayer.X, CurrentPlayer.Y);
-                if(elementAtPlayerPos == "X")
+                if(elementAtPlayerPos == "?")
                 {
                     break;
                 }
 
                 // Låt consolen rendra.
-                System.Threading.Thread.Sleep(20);
+                System.Threading.Thread.Sleep(10);
             }
         }
     }

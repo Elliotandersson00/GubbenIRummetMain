@@ -13,7 +13,7 @@ namespace GubbenIRummet
             Game currentGame = new Game();
             currentGame.Start();
 
-            /*
+            
             int answersFalse = 0;
             int answer;
             bool gameOver = false;
@@ -169,7 +169,7 @@ namespace GubbenIRummet
                 {
                     return false;
                 }
-            }*/
+            }
         }
     }
 }

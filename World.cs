@@ -26,7 +26,7 @@ namespace GubbenIRummet
                 {
                     string element = Grid[y, x];
                     Console.SetCursorPosition(x, y);
-                    if (element == "X")
+                    if (element == "?")
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                     }
@@ -42,7 +42,7 @@ namespace GubbenIRummet
         {
             return Grid[y, x];
         }
-        public bool IsPositionWalkable(int y, int x)
+        public bool IsPositionWalkable(int x, int y)
         {
             // Kolla vart X befinner sig först.
             if(x < 0 || y < 0 || x >= Cols || y >= Rows )
@@ -51,7 +51,7 @@ namespace GubbenIRummet
             }
 
             // Kolla om grid positionen går att gå på
-            return Grid[y, x] == " " || Grid[y, x] == "X";
+            return Grid[y, x] == " " || Grid[y, x] == "?";
         }
     }
 }
