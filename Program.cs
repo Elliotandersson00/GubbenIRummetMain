@@ -152,7 +152,6 @@ namespace GubbenIRummet
             static void GameTitle()
             {
                 Console.WriteLine("     Välkommen Till Spelet.");
-                Console.ReadLine();
                 Console.WriteLine("     Tryck På Valfri Knapp:");
                 Console.ReadLine();
 
