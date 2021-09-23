@@ -11,17 +11,17 @@ namespace GubbenIRummet
         public static int answersFalse = 0;
         public static void Main(string[] args)
         {
+            GameTitle();
             Game currentGame = new Game();
             currentGame.Start();
 
-            
-            
             int answer;
             bool gameOver = false;
-            GameTitle();
             while (!gameOver)
             {
-                Question question1 = new Question("     Vad heter världen mest använda sökmotor?\n 1 = Google\n 2 = Bing\n 3 = Edge", 1);
+                
+                //varflr funkar inte clear???
+                Question question1 = new Question("\n\n\n     Vad heter världen mest använda sökmotor?\n 1 = Google\n 2 = Bing\n 3 = Edge", 1);
                 Console.WriteLine(question1.Questions);
                 if (int.TryParse(Console.ReadLine(), out answer))
                 {
@@ -37,6 +37,7 @@ namespace GubbenIRummet
                 else
                 {
                     Console.WriteLine("Felaktig inmatning!");
+                    continue;
                 }
 
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -61,6 +62,7 @@ namespace GubbenIRummet
                 else
                 {
                     Console.WriteLine("Felaktig inmatning!");
+                    continue;
                 }
 
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -178,7 +180,7 @@ namespace GubbenIRummet
             static void GameTitle()
             {
                 Console.WriteLine("     Välkommen Till Spelet.");
-                Console.WriteLine("     Tryck På Valfri Knapp:");
+                Console.WriteLine("     Tryck På Enter för att fortsätta:");
                 Console.ReadLine();
 
             }
